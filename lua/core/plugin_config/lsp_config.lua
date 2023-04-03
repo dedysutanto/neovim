@@ -5,7 +5,7 @@ require("luasnip.loaders.from_vscode").lazy_load()
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright", "bashls", "lua_ls", "html" }
+    ensure_installed = { "pyright", "bashls", "lua_ls", "html", "phpactor" }
 })
 
 vim.keymap.set("n", "gd", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
@@ -21,5 +21,8 @@ require("lspconfig").html.setup {
     capabilities = capabilities,
 }
 require("lspconfig").lua_ls.setup {
+    capabilities = capabilities,
+}
+require("lspconfig").phpactor.setup {
     capabilities = capabilities,
 }
