@@ -33,18 +33,14 @@ return {
     },
   },
 
-  -- nvim-ufo
-
-  --{
-  --  "kevinhwang91/nvim-ufo",
-  --  config = function()
-  --    require "configs.ufo"
-  --  end,
-
-  --  dependencies = {
-  --    "kevinhwang91/promise-async",
-  --  },
-  --},
+  -- find-cmdline
+  {
+    "VonHeikemen/fine-cmdline.nvim",
+    lazy = false,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+  },
 
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
